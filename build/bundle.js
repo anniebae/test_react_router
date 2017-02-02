@@ -12548,8 +12548,46 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 119 */,
-/* 120 */,
+/* 119 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(120);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(244)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!./../../../node_modules/css-loader/index.js!./styles.css", function() {
+			var newContent = require("!!./../../../node_modules/css-loader/index.js!./styles.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 120 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(121)();
+// imports
+
+
+// module
+exports.push([module.i, "body {\n  background: lightblue; }\n  body #app ul {\n    background-color: #111;\n    padding: 0; }\n    body #app ul li {\n      display: inline;\n      list-style-type: none;\n      margin: 0; }\n      body #app ul li a {\n        color: #FFF;\n        font-weight: bold;\n        text-decoration: none;\n        padding: 20px;\n        display: inline-block; }\n\n/*# sourceMappingURL=styles.css.map */\n", ""]);
+
+// exports
+
+
+/***/ }),
 /* 121 */
 /***/ (function(module, exports) {
 
@@ -27452,9 +27490,9 @@ var _Contact = __webpack_require__(114);
 
 var _Contact2 = _interopRequireDefault(_Contact);
 
-var _design = __webpack_require__(246);
+var _styles = __webpack_require__(119);
 
-var _design2 = _interopRequireDefault(_design);
+var _styles2 = _interopRequireDefault(_styles);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27478,7 +27516,7 @@ var App = function (_Component) {
 		value: function render() {
 			return _react2.default.createElement(
 				'div',
-				{ className: _design2.default.appWrapper },
+				{ className: 'appWrapper' },
 				_react2.default.createElement(
 					'h1',
 					null,
@@ -27486,13 +27524,13 @@ var App = function (_Component) {
 				),
 				_react2.default.createElement(
 					'ul',
-					{ className: _design2.default.header },
+					{ className: 'header' },
 					_react2.default.createElement(
 						'li',
 						null,
 						_react2.default.createElement(
 							_reactRouter.IndexLink,
-							{ to: '/', activeClassName: _design2.default.active },
+							{ to: '/', activeClassName: 'active' },
 							'Home'
 						)
 					),
@@ -27501,7 +27539,7 @@ var App = function (_Component) {
 						null,
 						_react2.default.createElement(
 							_reactRouter.Link,
-							{ to: '/stuff', activeClassName: _design2.default.active },
+							{ to: '/stuff', activeClassName: 'active' },
 							'Stuff'
 						)
 					),
@@ -27510,14 +27548,14 @@ var App = function (_Component) {
 						null,
 						_react2.default.createElement(
 							_reactRouter.Link,
-							{ to: '/contact', activeClassName: _design2.default.active },
+							{ to: '/contact', activeClassName: 'active' },
 							'Contact'
 						)
 					)
 				),
 				_react2.default.createElement(
 					'div',
-					{ className: _design2.default.content },
+					{ className: 'content' },
 					this.props.children
 				)
 			);
@@ -27540,46 +27578,6 @@ _reactDom2.default.render(_react2.default.createElement(
 		_react2.default.createElement(_reactRouter.Route, { path: 'contact', component: _Contact2.default })
 	)
 ), appContainer);
-
-/***/ }),
-/* 246 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(247);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// add the styles to the DOM
-var update = __webpack_require__(244)(content, {});
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!./../../../node_modules/css-loader/index.js!./design.css", function() {
-			var newContent = require("!!./../../../node_modules/css-loader/index.js!./design.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 247 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(121)();
-// imports
-
-
-// module
-exports.push([module.i, "body {\n  background: lightblue; }\n  body #app ul {\n    background-color: #111;\n    padding: 0; }\n    body #app ul li {\n      display: inline;\n      list-style-type: none;\n      margin: 0; }\n      body #app ul li a {\n        color: #FFF;\n        font-weight: bold;\n        text-decoration: none;\n        padding: 20px;\n        display: inline-block; }\n\n/*# sourceMappingURL=design.css.map */\n", ""]);
-
-// exports
-
 
 /***/ })
 /******/ ]);
