@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import { Router, Route, IndexRoute, IndexLink, Link, hashHistory } from 'react-router'
 
-import Home from './components/Home'
-import Stuff from './components/Stuff'
-import Contact from './components/Contact'
+import Home from '../../components/Home'
+import Stuff from '../../components/Stuff'
+import Contact from '../../components/Contact'
 
 class App extends Component {
 	render() {
@@ -18,8 +18,6 @@ class App extends Component {
 				</ul>
 				<div className="content">
 					{this.props.children}
-					
-
 				</div>
 			</div>
 		)
