@@ -6,17 +6,19 @@ import Home from '../../components/Home'
 import Stuff from '../../components/Stuff'
 import Contact from '../../components/Contact'
 
+import css from './design.css'
+
 class App extends Component {
 	render() {
 		return(
-			<div>
+			<div className={css.appWrapper}>
 				<h1>Simple SPA</h1>
-				<ul className="header">
-					<li><IndexLink to="/" activeClassName="active">Home</IndexLink></li>
-					<li><Link to="/stuff" activeClassName="active">Stuff</Link></li>
-					<li><Link to="/contact" activeClassName="active">Contact</Link></li>
+				<ul className={css.header}>
+					<li><IndexLink to="/" activeClassName={css.active}>Home</IndexLink></li>
+					<li><Link to="/stuff" activeClassName={css.active}>Stuff</Link></li>
+					<li><Link to="/contact" activeClassName={css.active}>Contact</Link></li>
 				</ul>
-				<div className="content">
+				<div className={css.content}>
 					{this.props.children}
 				</div>
 			</div>

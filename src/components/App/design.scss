@@ -1,0 +1,24 @@
+body {
+	background: lightblue;
+
+	#app {
+		ul {
+			background-color: #111;
+			padding: 0;
+
+			li {
+				display: inline;
+				list-style-type: none;
+				margin: 0;
+
+				a {
+					color: #FFF;
+					font-weight: bold;
+					text-decoration: none;
+					padding: 20px;
+					display: inline-block;
+				}
+			}
+		}
+	}
+}
